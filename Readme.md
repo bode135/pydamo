@@ -13,5 +13,4 @@
     2、如果不是D3D游戏的后台模拟的话，可以试试win API的系统级后台模拟SendMessage；
     3、如果键盘为PS/2圆形接口的话，可用winio模块，但不支持USB键盘。
 
-
-
+* 64位python推荐[`Ctypes`](https://github.com/bode135/VirtualKey_with_Ctypes "跳转到Ctypes")。

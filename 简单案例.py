@@ -32,9 +32,9 @@ ms.LeftClick()                      # 单击
 ms.test_click_right(x, y, 2, 1)     # 测试用, 延迟1秒后, 右键单击(x,y)位置，按下抬起的间隔为 2s
 
 sleep(1)
-ms.click_left(x, y)                 # 左键单击(x,y)位置, 默认按下抬起的间隔为2s
+ms.click_left(x, y, 2)                 # 左键单击(x,y)位置, 默认按下抬起的间隔为2s
 sleep(1)
-ms.click_right(x, y, 2)             # 右键单击(x,y)位置, 按下抬起的间隔为0.5s
+ms.click_right(x, y)             # 右键单击(x,y)位置, 按下抬起的间隔为0.5s
 
 
 # 键盘操作

@@ -8,14 +8,14 @@
 from time import sleep
 from damo import DM, Mouse, Key, vk
 
-dm = DM()           #初始化
-#dm.reg()           #注册
+dm = DM()           # 初始化
+#dm.reg()           # 注册
 dm.Beep(500,550)    # 蜂鸣器
 
 
 ## 绑定窗口，实现后台键鼠操作。可同时创建多个dm对象
-#dm.BindWindow(hwnd,display,mouse,keypad,mode)      # 若使用不了估计是欠费了，不搞违法事情用前台模拟就足够了……
-#dm.UnBindWindow()
+# dm.BindWindow(hwnd,display,mouse,keypad,mode)      # 若使用不了估计是欠费了，不搞违法事情用前台模拟就足够了……
+# dm.UnBindWindow()
 
 
 # 基本的鼠标操作
@@ -32,9 +32,9 @@ ms.LeftClick()                      # 单击
 ms.test_click_right(x, y, 2, 1)     # 测试用, 延迟1秒后, 右键单击(x,y)位置，按下抬起的间隔为 2s
 
 sleep(1)
-ms.click_left(x, y, 2)                 # 左键单击(x,y)位置, 默认按下抬起的间隔为2s
+ms.click_left(x, y, 2)              # 左键单击(x,y)位置, 默认按下抬起的间隔为2s
 sleep(1)
-ms.click_right(x, y)             # 右键单击(x,y)位置, 按下抬起的间隔为0.5s
+ms.click_right(x, y)                # 右键单击(x,y)位置, 按下抬起的间隔为0.5s
 
 
 # 键盘操作

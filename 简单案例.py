@@ -66,8 +66,9 @@ while(tt.during(10)):               # 10s内捕捉鼠标当前位置的颜色
 
 '''
 图片查找案例：     https://github.com/bode135/YellowCard/blob/master/yellow_card/yellow_card_test.py
-dm.Capture(x1, y1, x2, y2, file)        # 截图并保存: dm.Capture(0,0,2000,2000,"screen.bmp")
-dm.FindPic(self, x1, y1, x2, y2, pic_name, delta_color='101010', sim=0.9, dir=0, intX=0, intY=0):     # 图片查找
+
+dm.Capture(x1, y1, x2, y2, file)                     # 截图并保存: dm.Capture(0,0,2000,2000,"screen.bmp")
+dm.FindPic(x1, y1, x2, y2, pic_name, delta_color='101010', sim=0.9, dir=0, intX=0, intY=0)     # 图片查找
 '''
 
 '''

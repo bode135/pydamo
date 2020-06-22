@@ -17,8 +17,6 @@ class DM:
         print('版本：', self.ver(),'，ID：',self.GetID())
 
     def reg(self, reg_code = 'albin7a7a6b9740b219fb4db62c7865e00437', ver_info = '123'):
-
-
         # print('reg: ', self.dm.Reg('albin7a7a6b9740b219fb4db62c7865e00437', '123'))
         # print('reg: ',dm.Reg('xxhongdev4dd3dddabe56dfb834fb3b70f0cea8ee', '123'))
         # dm.Reg('fzdxwhl20070b412e2fa2fc4462a6c25de3826e859e','147')
@@ -544,7 +542,13 @@ class Mouse:
 
     def click_left(self,x, y, t=0.5):
         self.dm.MoveTo(x, y)
-        return self.dm.LeftClick()
+
+        self.dm.LeftDown()
+        sleep(t)
+        self.dm.LeftUp()
+        return 1
+
+        # return self.dm.LeftClick()
 
     def test_click_left(self,x, y, t=0.5, delay=1):
         sleep(delay)
@@ -552,7 +556,14 @@ class Mouse:
 
     def click_right(self,x, y, t=0.5):
         self.dm.MoveTo(x, y)
-        return self.dm.RightClick()
+
+        self.dm.RightDown()
+        sleep(t)
+        self.dm.RightUp()
+
+        return 1
+
+        # return self.dm.RightClick()
 
     def test_click_right(self,x, y, t=0.5, delay=1):
         sleep(delay)

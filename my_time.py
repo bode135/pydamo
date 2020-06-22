@@ -271,6 +271,7 @@ class Time():
             return 0
 
     1
+tt = Time()
 
 if __name__ == '__main__':
     if(0):

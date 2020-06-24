@@ -63,7 +63,7 @@ class DM:
             return self.dm.Capture(x1, y1, x2, y2, file)
 
         def FindPic(self, x1, y1, x2, y2, pic_name, delta_color='101010', sim=0.9, dir=0, intX=0, intY=0):
-            return self.dm.FindPic(x1, y1, x2, y2, pic_name, delta_color='101010', sim=0.9, dir=0, intX=0, intY=0)
+            return self.dm.FindPic(x1, y1, x2, y2, pic_name, delta_color='101010', sim=0.9, dir=0)
 
         def FindColor(self, x1, y1, x2, y2, color, sim, dir, intX, intY):
             return self.dm.FindColor(x1, y1, x2, y2, color, sim, dir, intX, intY)

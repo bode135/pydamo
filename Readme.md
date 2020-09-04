@@ -1,7 +1,7 @@
 # python调用大漠DLL
-对大漠插件进行了简单封装，编写了一个简单的使用案例。<br/>
+对大漠插件进行了简单封装，编写了一个简单的[`使用案例`](https://github.com/bode135/pydamo/blob/master/%E7%AE%80%E5%8D%95%E6%A1%88%E4%BE%8B.py)。<br/>
 该操作为驱动级模拟,在脚本制作方面强于笔者已知的任何python模块winio,ctypes等。<br/>
-附带图色抓取、文字识别、内存读写等接口,详情查阅说明文档。
+附带图色抓取、文字识别、内存读写等接口,详情查阅[`说明文档`](https://github.com/bode135/pydamo/tree/master/%E6%8E%A5%E5%8F%A3%E8%AF%B4%E6%98%8E)。
 
 # 使用条件:
     1、32位的python才能运行；

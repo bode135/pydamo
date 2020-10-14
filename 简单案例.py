@@ -14,13 +14,13 @@ dm.Beep(500,550)    # 蜂鸣器
 
 
 ## 绑定窗口，实现后台键鼠操作。可同时创建多个dm对象
-# dm.BindWindow(hwnd,display,mouse,keypad,mode)      # 若使用不了估计是欠费了，不搞违法事情用前台模拟就足够了……
+# dm.BindWindow(hwnd,display,mouse,keypad,mode)      # 若使用不了估计是欠费了，不搞违法事情用前台模拟就足够
 # dm.UnBindWindow()
 
 
 # 基本的鼠标操作
 ms = Mouse()                        # 生成一个新的大漠鼠标对象
-ms = Mouse(dm)                      # 继承旧的大漠鼠标对象，用于后台鼠标，建议使用这种
+ms = Mouse(dm)                      # 继承旧的大漠鼠标对象，节约内存，且可用于后台鼠标，建议使用这种
 
 ms.position()                       # 当前鼠标位置
 
@@ -63,7 +63,7 @@ while(tt.during(10)):               # 10s内捕捉鼠标当前位置的颜色
     x, y = ms.position()
     color = dm.GetColor(x, y)
 
-    print(tt.now().__round__(1), color)
+    print(tt.now(1), color)
 
 
 '''

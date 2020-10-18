@@ -1,3 +1,5 @@
+# pydamo简介
+驱动级按键模拟.<br>仅支持32位python.<br>需要管理员权限运行pycharm.
 # 安装
 ```pip install pydamo-test```<br>
 # 使用

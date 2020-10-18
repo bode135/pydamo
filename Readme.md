@@ -1,3 +1,20 @@
+# 安装
+```pip install pydamo-test```
+将dm.dll封装成第三方库, 可以当作python包导入直接进行操作.<br>
+还在测试阶段所以加上```-test```.
+# 使用
+```
+# 第一次使用时必须以管理员权限运行pycharm!
+from pydamo_0 import Time, DM, Mouse, Key, vk
+dm = DM()
+ms = Mouse(dm)
+
+print(ms.position)                  # 鼠标位置
+x, y = (0, 0)
+ms.position = x, y                  # 移动鼠标
+ms.click_right(x, y)                # 点击鼠标右键
+```
+
 # python调用大漠DLL
 对大漠插件进行了简单封装，编写了一个简单的[`使用案例`](https://github.com/bode135/pydamo/blob/master/%E7%AE%80%E5%8D%95%E6%A1%88%E4%BE%8B.py)。<br/>
 该操作为驱动级模拟,在脚本制作方面强于笔者已知的任何python模块winio,ctypes等。<br/>

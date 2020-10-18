@@ -4,6 +4,7 @@
 **第一次使用时必须以管理员权限运行pycharm!**
 ```
 from pydamo_0 import Time, DM, Mouse
+
 dm = DM()
 ms = Mouse(dm)
 tt = Time()

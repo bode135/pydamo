@@ -1,5 +1,7 @@
 # pydamo简介
-驱动级按键模拟.<br>仅支持32位python.<br>需要管理员权限运行pycharm.
+驱动级按键模拟.<br>
+需要管理员权限运行pycharm.<br>
+仅支持32位python.(64位解决方案: [`基于Ctypes的VirtualKey`](https://zhuanlan.zhihu.com/p/266522358 "跳转到 基于Ctypes的VirtualKey")<br>
 # 安装
 ```pip install pydamo-test```<br>
 # 使用

@@ -3,11 +3,14 @@
 # 使用
 **第一次使用时必须以管理员权限运行pycharm!**
 ```
-from pydamo_0 import Time, DM, Mouse, Key, vk
+from pydamo_0 import Time, DM, Mouse
 dm = DM()
 ms = Mouse(dm)
+tt = Time()
 
-print(ms.position)                  # 鼠标位置
+print(ms.position)                  # 当前鼠标位置
+
+tt.sleep(1)
 x, y = (0, 0)
 ms.position = x, y                  # 移动鼠标
 ms.click_right(x, y)                # 点击鼠标右键

@@ -14,6 +14,8 @@ x, y = (0, 0)
 ms.position = x, y                  # 移动鼠标
 ms.click_right(x, y)                # 点击鼠标右键
 ```
+更具体使用方式:
+[`知乎笔记`](https://zhuanlan.zhihu.com/p/266519446 "跳转到知乎")
 
 
 # python调用大漠DLL

@@ -4,7 +4,7 @@
 仅支持32位python.(64位解决方案: [`基于Ctypes的VirtualKey`](https://zhuanlan.zhihu.com/p/266522358 "跳转到 基于Ctypes的VirtualKey"))<br>
 
 > 2021.1.28日更新:<br>
-> 64位的前台模拟方案推荐: [`keyboard`](https://github.com/boppreh/keyboard "跳转到keyboard项目的git地址").<br>
+> 64位的前台模拟方案推荐: [`keyboard`](https://github.com/boppreh/keyboard "跳转到keyboard项目的git地址"){:target="_blank"}.<br>
 > 唯一的缺陷就是不支持后台键鼠.<br>
 
 # 安装

@@ -1,20 +1,32 @@
 #imports
 from time import time
 from time import sleep
+from bd_time import tt, vk, Time
+from pydamo_0.regsvr import RegDM, run_in_bat
+
+# print('This is self_model')
 
 class DM:
-    def __init__(self):
-        try:
-            from win32com.client import Dispatch
-            #dm = Dispatch('dm.dmsoft')  # 调用大漠插件
-            self.dm = Dispatch('dm.dmsoft')  # 调用大漠插件
-        except:
-            import os
-            os.system('regsvr32 dm.dll /s')
-            print('注册dm.dll')
-            self.dm = Dispatch('dm.dmsoft')  # 调用大漠插件
+    def __init__(self, dm_dirpath = None):
+        # try:
+        #     from win32com.client import Dispatch
+        #     dm = Dispatch('dm.dmsoft')  # 调用大漠插件
+        #     self.reg_infos = 0
+        # except:
+        reg_dm = RegDM(dm_dirpath)
+        # reg_dm.unreg_dm()
+        dm = reg_dm.reg()
+        self.reg_infos = reg_dm
 
-        print('版本：', self.ver(),'，ID：',self.GetID())
+        if(dm):
+            self.dm = dm
+            print('版本：', self.ver(),'，ID：',self.GetID())
+        else:
+            print('dm.dll注册失败!\n请检查python版本\n或手动注册dm.dll!')
+        1
+    def __repr__(self):
+        ret = '版本： ' + str(self.ver()) + '，ID：' + str(self.GetID())
+        return ret
 
     def reg(self, reg_code = 'albin7a7a6b9740b219fb4db62c7865e00437', ver_info = '123'):
         # print('reg: ', self.dm.Reg('albin7a7a6b9740b219fb4db62c7865e00437', '123'))
@@ -66,7 +78,9 @@ class DM:
             return self.dm.FindPic(x1, y1, x2, y2, pic_name, delta_color='101010', sim=0.9, dir=0)
 
         def FindColor(self, x1, y1, x2, y2, color, sim, dir, intX, intY):
+            # _, x0, y0 = dm.FindColor(0, 0, 1200, 800, color = "757575", sim = 1.0, dir = 1,  intX = 0, intY = 0)
             return self.dm.FindColor(x1, y1, x2, y2, color, sim, dir, intX, intY)
+
 
         def LoadPic(self, pic_name):
             return self.dm.LoadPic(pic_name)
@@ -419,7 +433,7 @@ class DM:
         def ExitOs(self, type):
             return self.dm.ExitOs(type)
 
-        def Beep(self, duration=500, f=500):
+        def Beep(self, duration=1000, f=800):
             return self.dm.Beep(f, duration)
 
     # My function
@@ -441,8 +455,6 @@ class DM:
         return break0
     1
 
-
-from my_time import vk
 
 class Key:
     def __init__(self,dm = 0, key='k'):
@@ -524,6 +536,7 @@ class Key:
 
     1
 
+
 class Mouse:
     def __init__(self,dm = 0):
         if (dm == 0):
@@ -531,8 +544,16 @@ class Mouse:
         else:
             self.dm = dm
 
+    @property
     def position(self):
-        return self.dm.GetCursorPos(x=0, y=0)[1:]
+        ret = self.dm.GetCursorPos(x=0, y=0)[1:]
+        return ret
+    @position.setter
+    def position(self, xy):
+        x, y = xy
+        self.move_to(x, y)
+        ret = x, y
+        return ret
 
     def set_delay(self, delay, type='dx'):
         return self.dm.SetMouseDelay(type, delay)
@@ -576,22 +597,29 @@ class Mouse:
     1
 
 
-if(0):
-    # debug
+if __name__ == '__main__':
+    dm = DM()
+    print(dm.ver())
+    import os
+    os.system('regsvr32 dm.dll -u -s')
 
-    dm = DM()   # 初始化
 
-    ms = Mouse(dm)
-    ms = Mouse()
-    ms.position()
-    x, y = (0, 0)
-    ms.move_to(x, y)
-    sleep(1)
-    ms.click_left(x, y, 2)
-    sleep(1)
-    ms.click_right(x, y, 1)
+    if (0):
+        # debug
 
-    # 键盘操作
-    kk = Key(dm)
-    kk.test_dp('a', 1)  # 测试用，1秒后按下a键
-    kk.dp('a')  # 按下a键
+        dm = DM()  # 初始化
+
+        ms = Mouse(dm)
+        ms = Mouse()
+        ms.position()
+        x, y = (0, 0)
+        ms.move_to(x, y)
+        sleep(1)
+        ms.click_left(x, y, 2)
+        sleep(1)
+        ms.click_right(x, y, 1)
+
+        # 键盘操作
+        kk = Key(dm)
+        kk.test_dp('a', 1)  # 测试用，1秒后按下a键
+        kk.dp('a')  # 按下a键

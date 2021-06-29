@@ -15,7 +15,7 @@
 ```
 from pydamo_0 import Time, DM, Mouse
 
-dm = DM()
+dm = DM()   # 可指定dm.dll路径DM(path), 若无法使用某些函数dm.f(), 则使用dm.dm.f()来调用.
 ms = Mouse(dm)
 tt = Time()
 

@@ -1,7 +1,8 @@
 # pydamo简介
-驱动级按键模拟.<br>
+提供驱动级按键模拟, 以及修改内存、找图找色等功能.<br>  
 需要管理员权限运行pycharm.<br>
 仅支持32位python.(64位解决方案: [`基于Ctypes的VirtualKey`](https://github.com/bode135/VirtualKey_with_Ctypes "跳转到 基于Ctypes的VirtualKey"))<br>
+对大漠插件的简单封装.<br>
 # 安装
 ```pip install pydamo-test```<br>
 ---

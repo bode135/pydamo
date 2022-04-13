@@ -5,8 +5,8 @@
 - 提供驱动级按键模拟, 以及修改内存、找图找色等功能.
 - 需要管理员权限运行pycharm.<br>
 - 仅支持32位python.
-- 关于32位python的版本管理, 请看本文最后: 如何用conda管理python, 以及pycharm启用conda创建的win32_python环境
-- 64位解决方案: [`基于Ctypes的VirtualKey`](https://github.com/bode135/VirtualKey_with_Ctypes "跳转到 基于Ctypes的VirtualKey"))
+- 关于32位python的版本管理, 请看本文最后: `如何用conda管理python, 以及pycharm启用conda创建的win32_python环境`
+- 64位解决方案: [`基于Ctypes的VirtualKey`](https://github.com/bode135/VirtualKey_with_Ctypes "跳转到 基于Ctypes的VirtualKey")
 
 
 

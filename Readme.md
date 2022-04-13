@@ -55,10 +55,10 @@ ms.click_right(x, y)                # 点击鼠标右键
 ```
 # 一些windows下的重要命令笔记
 
-# 查看操作系统位数
+# 查看conda的平台位数
 conda info | findstr platform
 
-# 设置为32位
+# 设置为32位(临时生效, 重新打开cmd将失效)
 set CONDA_FORCE_32BIT=1
 
 # 创建32位的python3.8

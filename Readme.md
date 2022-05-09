@@ -21,11 +21,6 @@ pip install pydamo-test
 ```
 
 
----
-**2021.1.28日更新:**<br>
-> 64位的前台模拟方案推荐: [`keyboard`](https://github.com/boppreh/keyboard "跳转到keyboard项目的git地址").<br>
-> 唯一的缺陷就是不支持后台键鼠.<br>
----
 # 使用
 
 - **第一次使用时必须以管理员权限运行pycharm!**
@@ -60,5 +55,11 @@ ms.click_right(x, y)                # 点击鼠标右键
     2、如果不是D3D游戏的后台模拟的话，可以试试win API的系统级后台模拟SendMessage；
     3、如果键盘为PS/2圆形接口的话，可用winio模块，但不支持USB键盘。
 
-* 64位python推荐[`Ctypes`](https://github.com/bode135/VirtualKey_with_Ctypes "跳转到Ctypes")。
+* 64位python推荐
+> 这些不支持后台键鼠.<br>
+- [`Ctypes`](https://github.com/bode135/VirtualKey_with_Ctypes "跳转到Ctypes")
+- [`keyboard`](https://github.com/boppreh/keyboard "跳转到keyboard项目的git地址")
+
+
+
 

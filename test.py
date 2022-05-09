@@ -1,5 +1,7 @@
 """
 examples
+
+- 后台按键需要注册, 需要付费购买注册码, 参考接口说明文件夹
 """
 
 
@@ -7,7 +9,7 @@ from pydamo_0 import Time, DM, Mouse, Key, vk
 
 
 dm = DM()
-# dm. reg()     # 后台按键需要注册
+# dm. reg(your_register_code)
 # dm.unreg_dm()
 
 ms = Mouse(dm)
@@ -18,7 +20,7 @@ dm.Beep()       # 蜂鸣器
 
 
 # ---------------- mouse simulation ---------------
-ms.position     # 当前鼠标位置
+print(f'Mouse position: {ms.position}')     # 当前鼠标位置
 
 x, y = (1000, 500)
 ms.move_to(x, y)                    # 移动鼠标_1

@@ -13,7 +13,14 @@
 
 
 # 安装
-```pip install pydamo-test```<br>
+
+```
+shells\configWin32Env.bat       # 使用conda新建一个win32_py36环境
+
+pip install pydamo-test
+```
+
+
 ---
 **2021.1.28日更新:**<br>
 > 64位的前台模拟方案推荐: [`keyboard`](https://github.com/boppreh/keyboard "跳转到keyboard项目的git地址").<br>

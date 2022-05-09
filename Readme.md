@@ -15,7 +15,7 @@
 # 安装
 
 ```
-shells\configWin32Env.bat       # 使用conda新建一个win32_py36环境
+shells\configWin32Env.bat       # use conda to create a win32_py36 interpreter
 
 pip install pydamo-test
 ```

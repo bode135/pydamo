@@ -1,3 +1,8 @@
+"""
+examples
+"""
+
+
 from pydamo_0 import Time, DM, Mouse, Key, vk
 
 

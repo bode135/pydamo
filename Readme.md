@@ -46,8 +46,8 @@ ms.click_right(x, y)                # 点击鼠标右键
 ```
 
 - More examples:
-    - [`知乎笔记`](https://zhuanlan.zhihu.com/p/266519446 "跳转到知乎")
     - [`test.py`](https://github.com/bode135/pydamo/blob/master/test.py)
+    - [`知乎笔记`](https://zhuanlan.zhihu.com/p/266519446 "跳转到知乎")
 
 
 # 使用条件:

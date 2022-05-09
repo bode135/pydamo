@@ -3,7 +3,7 @@ from pydamo_0 import Time, DM, Mouse, Key, vk
 
 dm = DM()
 # dm. reg()     # 后台按键需要注册
-# dm.reg_infos.unreg_dm()
+# dm.unreg_dm()
 
 ms = Mouse(dm)
 kk = Key(dm)
@@ -42,11 +42,13 @@ kk.down('a')
 kk.up(vk.ctrl)
 kk.up('a')
 
+
 # 像素颜色捕捉
 def conv_to_rgb(color):
     RGB_str = [color[:2], color[2:-2], color[-2:]]
     RGB = [int(i, 16) for i in RGB_str]
     return RGB
+
 
 tt.__init__()
 while (tt.during(10)):  # 10s内捕捉鼠标当前位置的颜色

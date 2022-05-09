@@ -1,20 +1,12 @@
-#imports
 from time import time
 from time import sleep
 from bd_time import tt, vk, Time
 from pydamo_0.regsvr import RegDM, run_in_bat
 
-# print('This is self_model')
 
 class DM:
     def __init__(self, dm_dirpath = None):
-        # try:
-        #     from win32com.client import Dispatch
-        #     dm = Dispatch('dm.dmsoft')  # 调用大漠插件
-        #     self.reg_infos = 0
-        # except:
         reg_dm = RegDM(dm_dirpath)
-        # reg_dm.unreg_dm()
         dm = reg_dm.reg()
         self.reg_infos = reg_dm
 
@@ -23,7 +15,7 @@ class DM:
             print('版本：', self.ver(),'，ID：',self.GetID())
         else:
             print('dm.dll注册失败!\n请检查python版本\n或手动注册dm.dll!')
-        1
+
     def __repr__(self):
         ret = '版本： ' + str(self.ver()) + '，ID：' + str(self.GetID())
         return ret
@@ -35,6 +27,9 @@ class DM:
         # dm.Reg('xxhongdev4dd3dddabe56dfb834fb3b70f0cea8ee','Oa0UhMx5rC')
 
         return self.dm.Reg(reg_code, ver_info)
+
+    def unreg_dm(self):
+        return self.reg_infos.unreg_dm()
 
     def Reg(self, reg_code, ver_info):
         return self.reg(reg_code, ver_info)
@@ -463,7 +458,6 @@ class Key:
         else:
             self.dm = dm
 
-
         if (key.__class__.__name__ == 'str'):
             self.chr = key.upper()
         else:
@@ -548,6 +542,7 @@ class Mouse:
     def position(self):
         ret = self.dm.GetCursorPos(x=0, y=0)[1:]
         return ret
+
     @position.setter
     def position(self, xy):
         x, y = xy
@@ -569,8 +564,6 @@ class Mouse:
         self.dm.LeftUp()
         return 1
 
-        # return self.dm.LeftClick()
-
     def test_click_left(self,x, y, t=0.5, delay=1):
         sleep(delay)
         return self.click_left(x, y, t)
@@ -583,8 +576,6 @@ class Mouse:
         self.dm.RightUp()
 
         return 1
-
-        # return self.dm.RightClick()
 
     def test_click_right(self,x, y, t=0.5, delay=1):
         sleep(delay)

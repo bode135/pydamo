@@ -27,7 +27,8 @@ pip install pydamo-test
 > 唯一的缺陷就是不支持后台键鼠.<br>
 ---
 # 使用
-**第一次使用时必须以管理员权限运行pycharm!**
+
+- **第一次使用时必须以管理员权限运行pycharm!**
 
 ```
 from pydamo_0 import Time, DM, Mouse
@@ -43,8 +44,11 @@ x, y = (0, 0)
 ms.position = x, y                  # 移动鼠标
 ms.click_right(x, y)                # 点击鼠标右键
 ```
-更具体使用方式:
-[`知乎笔记`](https://zhuanlan.zhihu.com/p/266519446 "跳转到知乎")
+
+- More examples:
+    - [`知乎笔记`](https://zhuanlan.zhihu.com/p/266519446 "跳转到知乎")
+    - [`test.py`](https://github.com/bode135/pydamo/blob/master/test.py)
+
 
 # 使用条件:
     1、32位的python才能运行；

@@ -7,7 +7,7 @@ examples
 from pydamo import Time, DM, Mouse, Key, vk
 
 dm = DM()
-# dm. reg(your_register_code)
+# dm.reg(your_register_code)
 # dm.unreg_dm()
 
 ms = Mouse(dm)
@@ -59,10 +59,10 @@ def conv_to_rgb(color):
 
 
 tt.__init__()
-while (tt.during(10)):  # 10s内捕捉鼠标当前位置的颜色
+while tt.during(10):  # 10s内捕捉鼠标当前位置的颜色
     tt.sleep(0.1)
 
-    if (tt.get_key_state(vk.mouse_right)):   break  # 按下鼠标右键则退出
+    if tt.get_key_state(vk.mouse_right):   break  # 按下鼠标右键则退出
 
     x, y = ms.position
     color = dm.GetColor(x, y)

@@ -10,7 +10,7 @@ def run_in_bat(cmd, echo=0):
     bat_name = 'cmd' + f_id + '.bat'
 
     cmd_head = 'chcp 65001\n'
-    if (echo == 0):
+    if echo == 0:
         cmd_head = '@echo off\n' + cmd_head
 
     bat_text = cmd_head + cmd

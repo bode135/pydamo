@@ -33,7 +33,7 @@ pip install pydamo-test
 - **第一次使用时必须以管理员权限运行pycharm!**
 
 ```
-from pydamo_0 import Time, DM, Mouse
+from pydamo import Time, DM, Mouse
 
 dm = DM()   # 可指定dm.dll路径DM(path), 若无法使用某些函数dm.f(), 则使用dm.dm.f()来调用.
 ms = Mouse(dm)

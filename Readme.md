@@ -24,7 +24,8 @@
 ```
 shells\configWin32Env.bat       # use conda to create a win32_py36 interpreter
 
-pip install pydamo-test
+# 推荐通过git clone后, 直接放在代码根目录下使用
+pip install -r requirements.txt
 ```
 
 

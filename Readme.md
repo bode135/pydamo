@@ -102,7 +102,7 @@ ms.click_right(x, y)                # 点击鼠标右键
       1. 自己重写一个驱动级dll, 但受限水平(计算机操作系统、驱动编程等相关知识匮乏)而无法实现
       2. 通过Microsoft的文档, 即 `ctypes.windll.user32.SendInput`来实现, 但容易被封
       3. 将pydamo打包为一个后台api服务, 64位程序通过api来调用(目前最可行的方案了)
-   2. `pynput`录制的原神脚本都是相对位移, 而`dm.MoveR`和`pydirectinput.moveRel`受限于鼠标加速度(系统加速度或者鼠标自带加速).想要完全复刻必须游戏有没有[仅使用原始输入(Raw Input setting)](https://github.com/learncodebygaming/pydirectinput/issues/57)功能, 不然总会有误差.
+   2. ~~`pynput`录制的原神脚本都是相对位移, 而`dm.MoveR`和`pydirectinput.moveRel`受限于鼠标加速度(系统加速度或者鼠标自带加速).想要完全复刻必须游戏有没有[仅使用原始输入(Raw Input setting)](https://github.com/learncodebygaming/pydirectinput/issues/57)功能, 不然总会有误差.~~已经用pywin32自带的mouse_event解决3D游戏的相对鼠标位移问题, 重点是去控制面板鼠标速度居中, 并取消windows的"提高鼠标精准度".
 
 
 
